@@ -1,0 +1,19 @@
+body {
+    background-color: chocolate;
+    color: #fff;
+}
+
+
+.container {
+    width: 50%;
+    background-color: cornflowerblue;
+    margin: 150px auto;
+    box-sizing: border-box;
+}
+
+.container h1 {
+    padding: 100px;
+    text-align: center;
+    font-weight: 900;
+    font-size: 100px;
+}
