@@ -210,3 +210,54 @@ const randomUserIp = (num = numbersMax) => {
     return NumberIP
 }
 console.log(randomUserIp())
+
+/*
+    Write a function which generates a randomMacAddress
+*/
+const randomMacAddress = () => {
+    // const Pattern = /[A-Z]|[0-9]/gi
+    const Pattern = '0123456789ABCDEF'
+    let digitNumbMac = ''
+    for (let words = 0; words < 6; words++) {
+        digitNumbMac += Pattern.charAt(Math.floor(Math.random() * 15))
+        digitNumbMac += Pattern.charAt(Math.floor(Math.random() * 15))
+        if (words != 5) {
+            digitNumbMac += '-'
+        }
+    }
+    console.log('NUMB', digitNumbMac)
+}
+randomMacAddress()
+
+
+/*
+Declare a function name randomHexaNumberGenerator. When this function is called it generates a random hexadecimal number. The function return the hexadecimal number.
+    console.log(randomHexaNumberGenerator());
+    '#ee33df'
+*/
+const randomHexaNumberGenerator = () => {
+    const regExp = '0123456789abcdefgh'
+        , sharp = '#'
+    let result = sharp.concat('')
+    for (let i = 0; i < 6; i++) {
+        result += regExp.charAt(Math.floor(Math.random() * regExp.length))
+    }
+    console.log(result)
+}
+randomHexaNumberGenerator()
+
+
+/*
+    Declare a function name userIdGenerator. When this function is called it generates seven character id. The function return the id.
+    console.log(userIdGenerator());
+        41XTDbE
+*/
+const userIdGenerator = () => {
+    let regExp = 'abcdefABCDEF0123456789'
+    let resultId = ''
+    for (let i = 0; i < 7; i++) {
+        resultId += regExp.charAt(Math.floor(Math.random() * regExp.length))
+    }
+    return resultId
+}
+console.log(userIdGenerator())
