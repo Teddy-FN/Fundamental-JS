@@ -58,6 +58,6 @@ const iterate = (value) => {
             nameUser.push(name)
         }
     }
-    console.log(nameUser)
+    return nameUser
 }
-iterate(users)
+console.log(iterate(users))
